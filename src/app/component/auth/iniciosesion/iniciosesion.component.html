@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<mat-card class="example-card">
+  <form [formGroup]="formGroup">
+  <mat-card-content>
+    <div class="header">
+      <h2>IntelEdu</h2>
+      <h3>INICIO DE SESION</h3>
+    </div>
+    <div class="content">
+        <mat-form-field appearance="outline">
+          <mat-label>Correo:</mat-label>
+          <input matInput placeholder="ex.0136524598" formControlName="email">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Contraseña:</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" formControlName="contra">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+      <mat-progress-bar *ngIf="iniciobar" mode="indeterminate"></mat-progress-bar>
+    </div>
+  </mat-card-content>
+
+  <mat-card-content >
+    <button id="botonestudiante" mat-button color="primary" [routerLink]="['/auth/registro']" routerLinkActive="active">Si no tiene una cuenta haga click aquí</button>
+    <button id="botonprofesor" mat-button color="primary" [routerLink]="['/auth/registroprofesor']" routerLinkActive="active">Si es profesor haga click aquí</button>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button color="warn" [disabled]="formGroup.invalid" (click)="iniciarsesion()">INICIAR SESION</button>
+  </mat-card-actions>
+  </form>
+</mat-card>
+</body>
+</html>
+<ng-container *ngIf="issloading">
+  <div class="bss-loader">
+    <img src="assets/images/rolling.gif" alt="">
+  </div>
+</ng-container>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<mat-card class="example-card">
+  <form [formGroup]="formGroup">
+    <mat-card-content>
+      <div class="header">
+        <h2>IntelEdu</h2>
+        <h3>Registro de Usuario (Estudiante)</h3>
+      </div>
+      <div class="content">
+        <mat-form-field appearance="outline">
+          <mat-label>Nombre:</mat-label>
+          <input matInput placeholder="ex.0136524598" formControlName="cedula">
+        </mat-form-field>
+
+      </div>
+      <div class="content">
+        <mat-form-field appearance="outline">
+          <mat-label>Edad:</mat-label>
+          <input matInput placeholder="ex.0136524598" formControlName="cedula">
+        </mat-form-field>
+
+      </div>
+      <div class="content">
+        <mat-form-field appearance="outline">
+          <mat-label>Curso:</mat-label>
+          <input matInput placeholder="ex.0136524598" formControlName="cedula">
+        </mat-form-field>
+
+      </div>
+      <div class="content">
+        <mat-form-field appearance="outline">
+          <mat-label>Email:</mat-label>
+          <input matInput placeholder="ex.0136524598" formControlName="cedula">
+        </mat-form-field>
+
+      </div>
+      <div class="content">
+        <mat-form-field appearance="outline">
+          <mat-label>Contraseña:</mat-label>
+          <input matInput placeholder="ex.0136524598" formControlName="cedula">
+        </mat-form-field>
+
+      </div>
+
+    </mat-card-content>
+
+    <mat-grid-list cols="2" rowHeight="5:0.9">
+      <mat-grid-tile>
+        <button mat-stroked-button color="primary" style="text-decoration-color: red" >Regresar</button>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <button mat-stroked-button color="primary" style="text-decoration-color: red" >Registrar</button>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+
+
+  </form>
+</mat-card>
+</body>
+</html>
