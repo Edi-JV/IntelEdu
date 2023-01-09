@@ -41,6 +41,7 @@ export class IniciosesionComponent implements OnInit,AfterViewInit {
   iniciarsesion(){
     this.iniciobar=true
     this.inicioSesionService.loginUsuarioEmail(this.formGroup.getRawValue()).subscribe(value => {
+      console.log(value);
       console.log(value.token)
       this._snackBar.open('SESION INICIADA', 'ACEPTAR');
       sessionStorage.clear()

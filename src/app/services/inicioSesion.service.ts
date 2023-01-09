@@ -22,7 +22,7 @@ export class InicioSesionService {
 
   loginUsuarioEmail(estudiante: ɵTypedOrUntyped<{ contra: FormControl<String | null>; email: FormControl<String | null> }, ɵFormGroupRawValue<{ contra: FormControl<String | null>; email: FormControl<String | null> }>, any>): Observable<Estudiante> {
     console.log(estudiante)
-    return this.http.post<PersonaUsuario>(environment.URL_APP + "/persona/loginemail", estudiante)
+    return this.http.post<Estudiante>(environment.URL_APP + "/persona/loginemail", estudiante)
   }
 
 
